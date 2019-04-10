@@ -5,19 +5,19 @@ import { withStyles } from '@material-ui/core/styles';
 import logo from '../../logo.svg';
 import './App.css';
 import SocialCard from '../SocialCard/SocialCard';
+// import HeaderBar from '../HeaderBar/HeaderBar';
 import datas from '../../data/data.json';
 
-const styles = {
-  main: {
-    padding: '30px 10px 5px',
-    maxWidth: '1200px',
-    margin: 'auto',
-  },
-};
+const styles = {};
+
+// TODO : create 2 other column (left & right) search for example online
+// TODO : create real header
+// TODO : rename project Social-List
 
 const App = () => {
   return (
     <div className="App">
+      {/* <HeaderBar /> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
