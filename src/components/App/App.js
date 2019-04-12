@@ -12,12 +12,12 @@ import datas from '../../data/data.json';
 const styles = {
   title: {
     color: green,
-    margin: '100px',
+    marginTop: '100px',
   },
 };
 
 const titleStyle = {
-  color: green,
+  color: '#00000',
 };
 
 // TODO : create 2 other column (left & right) search for example online
@@ -30,7 +30,7 @@ const App = classes => {
     <div className="App">
       {/* <HeaderBar /> */}
       <header className="App-header">
-        <p style={classes.title}>Social-Media</p>
+        <p style={{ color: '#00d8ff', textAlign: 'left' }}>Social-Media</p>
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <div className="container">
