@@ -25,12 +25,27 @@ const styles = {
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
+  titlename: {
+    textAlign: 'left',
+    display: 'inline-block',
+  },
+  subheader: {
+    textAlign: 'left',
+    color: 'grey',
+  },
+  date: {
+    textAlign: 'left',
+    color: 'grey',
+    display: 'inline-block',
+  },
+  title: {
+    textAlign: 'left',
+  },
 };
 
 const getColor = () => Math.floor(Math.random() * 16777215).toString(16);
-
 const SocialCard = ({ classes, data }) => {
-  const { firstname, title, image, content, likes, comments } = data;
+  const { firstname, title, subheader, image, content, likes, comments, date } = data;
   return (
     <div className={classes.card}>
       {/* TODO : make it clickable */}
@@ -46,7 +61,15 @@ const SocialCard = ({ classes, data }) => {
             </Avatar>
           }
           // TODO : add the name of the person
-          title={title}
+          title={
+            <>
+              <div className={classes.title}>
+                <Typography className={classes.titlename}>{title} · </Typography>
+                <Typography className={classes.date}>{date}</Typography>
+              </div>
+            </>
+          }
+          subheader={<Typography className={classes.subheader}>{subheader}</Typography>}
         />
         <CardMedia className={classes.media} image={image} />
         <CardContent>
