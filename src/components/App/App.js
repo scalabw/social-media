@@ -6,7 +6,7 @@ import { blue, green } from '@material-ui/core/colors';
 import logo from '../../logo.svg';
 import './App.css';
 import SocialCard from '../SocialCard/SocialCard';
-// import HeaderBar from '../HeaderBar/HeaderBar';
+import HeaderBar from '../HeaderBar/HeaderBar';
 import datas from '../../data/data.json';
 
 const styles = {
@@ -14,25 +14,19 @@ const styles = {
     color: green,
     marginTop: '100px',
   },
+  content: {
+    marginTop: '3em',
+    color: 'blue',
+  },
 };
 
-const titleStyle = {
-  color: '#00000',
-};
-
-// TODO : create 2 other column (left & right) search for example online
-// TODO : create real header
 // TODO : rename project Social-List
 // TODO : change color title
 
-const App = classes => {
+const App = () => {
   return (
     <div className="App">
-      {/* <HeaderBar /> */}
-      <header className="App-header">
-        <p style={{ color: '#00d8ff', textAlign: 'left' }}>Social-Media</p>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <HeaderBar> </HeaderBar>
       <div className="container">
         <div className="row">
           <div className=" col" />
